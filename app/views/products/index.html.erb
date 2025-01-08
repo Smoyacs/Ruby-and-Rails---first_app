@@ -1,0 +1,14 @@
+<h1>Products#index</h1>
+<p>Find me in app/views/products/index.html.erb</p>
+
+<%= debug @products %>
+
+<div id="products">
+  <h2> List of products </h2>
+  <% @products.each do |product| %>
+    <span><%= product.id %></span>
+    <span><%= product.name %></span>
+    <span><%= product.created_at %></span>
+    <span><%= product.updated_at %></span>
+  <% end %>
+</div>
