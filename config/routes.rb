@@ -29,7 +29,7 @@ Rails.application.routes.draw do
   # delete "/products/:id", to: "products#destroy"
 
   # resources :products
-  resources :products, only: [ :index, :show ]
+  resources :products
 
   # Controller namespaces and routing
   namespace :admin do

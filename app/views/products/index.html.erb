@@ -3,12 +3,29 @@
 
 <%= debug @products %>
 
+<!-- 
 <div id="products">
   <h2> List of products </h2>
   <% @products.each do |product| %>
+  <a class="product"
+    href="/products/<%= product.id %>"
+  >
     <span><%= product.id %></span>
     <span><%= product.name %></span>
     <span><%= product.created_at %></span>
     <span><%= product.updated_at %></span>
+  </a>
+  <% end %>
+</div>
+-->
+
+<%= link_to "New Product", new_product_path%>
+
+<div id="products">
+  <h2> List of products </h2>
+  <% @products.each do |product| %>
+  <div class="product">
+    <%= link_to product.name, product%>
+  </div>
   <% end %>
 </div>
