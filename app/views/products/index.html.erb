@@ -21,11 +21,13 @@
 
 <%= link_to "New Product", new_product_path if authenticated? %>
 
-<div id="products">
-  <h2> List of products </h2>
-  <% @products.each do |product| %>
-  <div class="product">
-    <%= link_to product.name, product%>
+<% cache @products do %>
+  <div id="products">
+    <h2> List of products </h2>
+    <% @products.each do |product| %>
+    <div class="product">
+      <%= link_to product.name, product%>
+    </div>
+    <% end %>
   </div>
-  <% end %>
-</div>
+<% end %>
