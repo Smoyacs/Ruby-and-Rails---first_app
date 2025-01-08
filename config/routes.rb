@@ -29,8 +29,8 @@ Rails.application.routes.draw do
   # delete "/products/:id", to: "products#destroy"
 
   # resources :products
-  resources :products, only: [:index,:show]
-  
+  resources :products, only: [ :index, :show ]
+
   # Controller namespaces and routing
   namespace :admin do
     resources :products
@@ -39,4 +39,7 @@ Rails.application.routes.draw do
   # scope module: "admin" do
   #   resources :products
   # end
+
+
+  # bundle exec rubocop config/routes.rb --autocorrect
 end
