@@ -1,0 +1,15 @@
+<div data-controller="previews">
+    <%= form.label :featured_image, style: "display: block" %>
+
+    <%= form.file_field :featured_image, accept: "image/*",
+      direct_upload: true,
+      data: { previews_target: "input", action: "change->previews#preview"}
+    %>
+
+    <% if @product.featured_image.attached? %>
+        <%= image_tag @product.featured_image, data: { previews_target: "preview" }, style: "widt: 300px; height: auto;" %>
+    <% else %>
+        <%= image_tag "", data: { previews_target: "preview" }, style: "widt: 300px; height: auto;" %>
+    <% end %>
+
+</div>
