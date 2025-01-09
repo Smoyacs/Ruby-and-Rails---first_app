@@ -1,7 +1,12 @@
 <%= form_with model: @product do |form| %>
   <div>
-    <%= form.label :name %>
+    <%= form.label :name, style: "display: block"%>
     <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :inventory_count, style: "display: block" %>
+    <%= form.number_field :inventory_count %>
   </div>
 
   <div>
