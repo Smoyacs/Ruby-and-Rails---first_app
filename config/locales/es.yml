@@ -1,0 +1,6 @@
+es:
+  hello: "Hola mundo"
+  products:
+    index:
+      title: "Productos"
+      list_of_products: "Lista de productos"
