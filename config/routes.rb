@@ -32,12 +32,15 @@ Rails.application.routes.draw do
   # delete "/products/:id", to: "products#destroy"
 
   # resources :products
-  resources :products
+  resources :products do
+    resources :subscribers, only: [ :create ]
+  end
+
 
   # Controller namespaces and routing
-  namespace :admin do
-    resources :products
-  end
+  # namespace :admin do
+  #   resources :products
+  # end
   # Admin controller without prefix /admin
   # scope module: "admin" do
   #   resources :products

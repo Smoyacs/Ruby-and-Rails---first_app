@@ -6,8 +6,8 @@
       data: { previews_target: "input", action: "change->previews#preview"}
     %>
 
-    <% if @product.featured_image.attached? %>
-        <%= image_tag @product.featured_image, data: { previews_target: "preview" }, style: "widt: 300px; height: auto;" %>
+    <% if product.featured_image.attached? %>
+        <%= image_tag product.featured_image, data: { previews_target: "preview" }, style: "widt: 300px; height: auto;" %>
     <% else %>
         <%= image_tag "", data: { previews_target: "preview" }, style: "widt: 300px; height: auto;" %>
     <% end %>
